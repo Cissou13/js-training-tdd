@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
  * Create the `max` function that takes 2 number as arguments
@@ -10,13 +10,21 @@
  */
 
 // Your code:
-
+function max(number1, number2) {
+  if (number1 > number2) {
+    return number1;
+  } else if (number1 < number2) {
+    return number2;
+  } else {
+    return "Numbers are the same";
+  }
+}
 //* Begin of tests
-const assert = require('assert');
+const assert = require("assert");
 
-assert.strictEqual(typeof max, 'function');
+assert.strictEqual(typeof max, "function");
 assert.strictEqual(max.length, 2);
-assert.strictEqual(max.toString().includes('Math.max'), false);
+assert.strictEqual(max.toString().includes("Math.max"), false);
 assert.notStrictEqual(max, Math.max);
 assert.strictEqual(max(0, -2), 0);
 assert.strictEqual(max(-1, 10), 10);
